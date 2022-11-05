@@ -7,4 +7,5 @@
     <dimen name="layoutGap_medium">8dp</dimen>
     <dimen name="layoutGap_large">10dp</dimen>
     <dimen name="textView_Size">48dp</dimen>
+    <dimen name="chipText_size">16dp</dimen>
 </resources>

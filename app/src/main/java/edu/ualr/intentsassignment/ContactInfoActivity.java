@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -47,24 +48,32 @@ public class ContactInfoActivity extends AppCompatActivity {
 
     // TODO 08. Create a new method that invokes a Phone Dialer app, using as parameter the phone number included in the contact info received from ContactFormActivity in the previous step
     public void callContact() {
-
+        String phoneNumberUri = "tel:" + phoneNumber;
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(phoneNumberUri));
+        startActivity(intent);
     }
 
     // TODO 09. Create a new method that invokes a Messages app, using as parameter the phone number included in the contact info received from ContactFormActivity in the 7th step
     public void textContact() {
-
+        String phoneNumberUri = "tel:" + phoneNumber;
+        Intent intent = new Intent(Intent.ACTION_SEND, Uri.parse(phoneNumberUri));
+        startActivity(intent);
     }
     // TODO 10. Create a new method that invokes a Maps app, using as parameter the address included in the contact info received from ContactFormActivity in the 7th step
     public void openMaps() {
-
+        String addressUri = "geo:" + mainAddress;
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(addressUri));
+        startActivity(intent);
     }
     // TODO 11. Create a new method that invokes an Email app, using as parameter the email address included in the contact info received from ContactFormActivity in the 7th step
     public void emailContact() {
-
+        Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse(emailAddress));
+        startActivity(intent);
     }
     // TODO 12. Create a new method that invokes an Web Browser app, using as parameter the web url included in the contact info received from ContactFormActivity in the 7th step
     public void openWebsite() {
-
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
+        startActivity(intent);
     }
 
 

@@ -33,36 +33,60 @@
                 android:id="@+id/callChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutGap_medium"
                 android:backgroundTint="@color/colorBlue"
-                android:textColor="@color/colorPrimary"
+                android:onClick="callContact"
                 android:text="@string/call_button_label"
-                app:chipIcon="@drawable/ic_phone_white_24dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/textChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorBlue"
                 android:textColor="@color/colorPrimary"
-                android:text="@string/text_button_label"
-                app:chipIcon="@drawable/ic_textsms_white_24dp" />
+                android:textSize="@dimen/chipText_size"
+                app:chipIcon="@drawable/ic_phone_white_24dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/emailChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutGap_medium"
                 android:backgroundTint="@color/colorBlue"
-                android:textColor="@color/colorPrimary"
+                android:onClick="emailContact"
                 android:text="@string/email_button_label"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/chipText_size"
                 app:chipIcon="@drawable/ic_email_white_24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/textChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutGap_medium"
+                android:backgroundTint="@color/colorBlue"
+                android:onClick="textContact"
+                android:text="@string/text_button_label"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/chipText_size"
+                app:chipIcon="@drawable/ic_textsms_white_24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/websiteChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutGap_medium"
+                android:backgroundTint="@color/colorBlue"
+                android:onClick="openWebsite"
+                android:text="@string/web_button_label"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/chipText_size"
+                app:chipIcon="@drawable/ic_public_white_24dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/mapChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutGap_medium"
                 android:backgroundTint="@color/colorBlue"
-                android:textColor="@color/colorPrimary"
+                android:onClick="openMaps"
                 android:text="@string/directions_button_label"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/chipText_size"
                 app:chipIcon="@drawable/ic_directions_white_24dp" />
 
         </com.google.android.material.chip.ChipGroup>
