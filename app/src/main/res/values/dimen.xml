@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layoutMargin_small">10dp</dimen>
+    <dimen name="layoutMargin_medium">20dp</dimen>
+    <dimen name="layoutMargin_large">30dp</dimen>
+    <dimen name="layoutGap_small">5dp</dimen>
+    <dimen name="layoutGap_medium">8dp</dimen>
+    <dimen name="layoutGap_large">10dp</dimen>
+    <dimen name="textView_Size">48dp</dimen>
+</resources>
