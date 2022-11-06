@@ -1,93 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="@dimen/layoutMargin_medium"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:layout_margin="@dimen/layoutMargin_medium">
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
 
         <TextView
             android:id="@+id/iconTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/layoutGap_small"
-            android:background="@drawable/circle" />
+            android:background="@drawable/ic_person" />
 
         <TextView
             android:id="@+id/contactNameTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/layoutGap_small"
-            android:text="@string/contact_name" />
+            android:gravity="center_horizontal"
+            android:text="@string/contact_name"
+            android:textSize="@dimen/contact_name" />
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/callChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layoutGap_medium"
-                android:backgroundTint="@color/colorBlue"
-                android:onClick="callContact"
-                android:text="@string/call_button_label"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/chipText_size"
-                app:chipIcon="@drawable/ic_phone_white_24dp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/emailChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layoutGap_medium"
-                android:backgroundTint="@color/colorBlue"
-                android:onClick="emailContact"
-                android:text="@string/email_button_label"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/chipText_size"
-                app:chipIcon="@drawable/ic_email_white_24dp" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/callChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layoutGap_medium"
+                    android:layout_marginRight="@dimen/layoutGap_medium"
+                    android:backgroundTint="@color/colorBlue"
+                    android:onClick="callContact"
+                    android:text="@string/call_button_label"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/chipText_size"
+                    app:chipIcon="@drawable/ic_phone_white_24dp" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/textChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layoutGap_medium"
-                android:backgroundTint="@color/colorBlue"
-                android:onClick="textContact"
-                android:text="@string/text_button_label"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/chipText_size"
-                app:chipIcon="@drawable/ic_textsms_white_24dp" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/textChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layoutGap_medium"
+                    android:layout_marginRight="@dimen/layoutGap_medium"
+                    android:backgroundTint="@color/colorBlue"
+                    android:onClick="textContact"
+                    android:text="@string/text_button_label"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/chipText_size"
+                    app:chipIcon="@drawable/ic_textsms_white_24dp"
+                    app:chipIconVisible="true" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/websiteChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layoutGap_medium"
-                android:backgroundTint="@color/colorBlue"
-                android:onClick="openWebsite"
-                android:text="@string/web_button_label"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/chipText_size"
-                app:chipIcon="@drawable/ic_public_white_24dp" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/emailChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layoutGap_medium"
+                    android:layout_marginRight="@dimen/layoutGap_medium"
+                    android:backgroundTint="@color/colorBlue"
+                    android:onClick="emailContact"
+                    android:text="@string/email_button_label"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/chipText_size"
+                    app:chipIcon="@drawable/ic_email_white_24dp"
+                    app:chipIconVisible="true" />
+            </TableRow>
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/mapChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layoutGap_medium"
-                android:backgroundTint="@color/colorBlue"
-                android:onClick="openMaps"
-                android:text="@string/directions_button_label"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/chipText_size"
-                app:chipIcon="@drawable/ic_directions_white_24dp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/mapChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorBlue"
+                    android:layout_marginLeft="@dimen/layoutGap_medium"
+                    android:layout_marginRight="@dimen/layoutGap_medium"
+                    android:onClick="openMaps"
+                    android:text="@string/directions_button_label"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/chipText_size"
+                    app:chipIcon="@drawable/ic_directions_white_24dp"
+                    app:chipIconVisible="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/websiteChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorBlue"
+                    android:layout_marginLeft="@dimen/layoutGap_medium"
+                    android:layout_marginRight="@dimen/layoutGap_medium"
+                    android:onClick="openWebsite"
+                    android:text="@string/web_button_label"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/chipText_size"
+                    app:chipIcon="@drawable/ic_public_white_24dp"
+                    app:chipIconVisible="true" />
+            </TableRow>
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -96,40 +123,48 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/textView_Size"
             android:layout_margin="@dimen/layoutGap_small"
-            android:drawableStart="@drawable/ic_phone_black_24dp"
             android:ems="12"
+            android:gravity="center_vertical"
             android:inputType="phone"
-            android:text="@string/phone_hint" />
+            android:text="@string/phone_hint"
+            android:textSize="@dimen/layoutMargin_medium"
+            app:drawableStartCompat="@drawable/ic_phone_black_24dp" />
 
         <TextView
             android:id="@+id/emailTV"
             android:layout_width="match_parent"
             android:layout_height="@dimen/textView_Size"
             android:layout_margin="@dimen/layoutGap_small"
-            android:drawableStart="@drawable/ic_email_black_24dp"
             android:ems="10"
+            android:gravity="center_vertical"
             android:inputType="textEmailAddress"
-            android:text="@string/email_hint" />
+            android:text="@string/email_hint"
+            android:textSize="@dimen/layoutMargin_medium"
+            app:drawableStartCompat="@drawable/ic_email_black_24dp" />
 
         <TextView
             android:id="@+id/addressTV"
             android:layout_width="match_parent"
             android:layout_height="@dimen/textView_Size"
             android:layout_margin="@dimen/layoutGap_small"
-            android:drawableStart="@drawable/ic_place_black_24dp"
             android:ems="10"
+            android:gravity="center_vertical"
             android:inputType="textPostalAddress"
-            android:text="@string/address_hint" />
+            android:text="@string/address_hint"
+            android:textSize="@dimen/layoutMargin_medium"
+            app:drawableStartCompat="@drawable/ic_place_black_24dp" />
 
         <TextView
             android:id="@+id/websiteTV"
             android:layout_width="match_parent"
             android:layout_height="@dimen/textView_Size"
             android:layout_margin="@dimen/layoutGap_small"
-            android:drawableStart="@drawable/ic_public_black_24dp"
             android:ems="10"
+            android:gravity="center_vertical"
             android:inputType="textPersonName"
-            android:text="@string/website_hint" />
+            android:text="@string/website_hint"
+            android:textSize="@dimen/layoutMargin_medium"
+            app:drawableStartCompat="@drawable/ic_public_black_24dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

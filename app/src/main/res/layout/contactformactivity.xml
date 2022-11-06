@@ -20,7 +20,7 @@
             android:drawableStart="@drawable/ic_perm_identity_black_24"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/first_name_hint" />
+            android:hint="@string/first_name_hint" />
 
         <EditText
             android:id="@+id/lastNameTV"
@@ -30,7 +30,7 @@
             android:drawableStart="@drawable/ic_perm_identity_black_24"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/last_name_hint" />
+            android:hint="@string/last_name_hint" />
 
         <EditText
             android:id="@+id/phoneNumberTV"
@@ -40,7 +40,7 @@
             android:drawableStart="@drawable/ic_phone_black_24dp"
             android:ems="12"
             android:inputType="phone"
-            android:text="@string/phone_hint" />
+            android:hint="@string/phone_hint" />
 
         <EditText
             android:id="@+id/emailTV"
@@ -50,7 +50,7 @@
             android:drawableStart="@drawable/ic_email_black_24dp"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:text="@string/email_hint" />
+            android:hint="@string/email_hint" />
 
         <EditText
             android:id="@+id/addressTV"
@@ -60,7 +60,7 @@
             android:drawableStart="@drawable/ic_place_black_24dp"
             android:ems="10"
             android:inputType="textPostalAddress"
-            android:text="@string/address_hint" />
+            android:hint="@string/address_hint" />
 
         <EditText
             android:id="@+id/websiteTV"
@@ -70,7 +70,7 @@
             android:drawableStart="@drawable/ic_public_black_24dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/website_hint" />
+            android:hint="@string/website_hint" />
 
         <Button
             android:id="@+id/saveContact"
